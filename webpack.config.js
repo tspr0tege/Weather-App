@@ -1,6 +1,7 @@
 const path = require('path');
 
 module.exports = {
+  mode: 'development',
   devServer: {
     historyApiFallback: true,
     contentBase: path.resolve(__dirname, './src')
@@ -10,7 +11,12 @@ module.exports = {
     rules: [
       {
         test: /\.js$/,
-        use: 'babel-loader'
+        use: {
+          loader: 'babel-loader',
+          options: {
+            presets: ['@babel/react']
+          }
+        }
       }
     ]
   },

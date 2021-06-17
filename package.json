@@ -19,7 +19,7 @@
     "webpack-dev-server": "^3.11.2"
   },
   "scripts": {
-    "watch": "webpack-dev-server --progress"
+    "watch": "./node_modules/.bin/webpack -w"
   },
   "author": "Squall Leonhart",
   "license": "ISC"
