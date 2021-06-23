@@ -1,4 +1,5 @@
 const path = require('path');
+const BUILD_DIR = path.resolve(__dirname, './src/build');
 
 module.exports = {
   mode: 'development',
@@ -10,7 +11,7 @@ module.exports = {
   module: {
     rules: [
       {
-        test: /\.js$/,
+        test: /\.(js|jsx)$/,
         use: {
           loader: 'babel-loader',
           options: {
@@ -21,6 +22,7 @@ module.exports = {
     ]
   },
   output: {
-    filename: 'bundle.js'
+    filename: 'bundle.js',
+    path: BUILD_DIR
   }     
 };
