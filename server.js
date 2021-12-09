@@ -1,7 +1,10 @@
+require('dotenv').config();
 const express = require('express')
 const Axios = require('axios');
 const app = express()
+
 const PORT = process.env.PORT || 3000
+const API_KEY = process.env.API_KEY;
 
 app.use(express.static('src'));
 app.use(express.urlencoded({extended: true}));
@@ -18,7 +21,7 @@ app.post('/weather', (req, res) => {
 
   Axios.get(`https://national-weather-service.p.rapidapi.com/points/${req.body.lat},${req.body.long}/forecast`, {
     headers: {
-      'x-rapidapi-key': 'b0e3679361msha821a26adaec506p15cbb0jsna5b1b34adecb',
+      'x-rapidapi-key': API_KEY,
       'x-rapidapi-host': 'national-weather-service.p.rapidapi.com'
     }
   })
