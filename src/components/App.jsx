@@ -3,7 +3,7 @@ import Axios from 'axios';
 
 import ForecastContainer from './ForecastContainer.jsx'
 import NearestWeather from './NearestWeather.jsx';
-import dummyData from './dummyData.js';
+import dummyData from '../data/dummyData.js';
 
 class App extends React.Component {
   constructor(props) {
@@ -29,25 +29,26 @@ class App extends React.Component {
 
   }
 
-  componentDidMount () {
-    var location; 
-    navigator.geolocation.getCurrentPosition((data) => {
-      console.log(data);      
-      location = data.coords;
-      Axios.post('/weather', {
-        lat: location.latitude,
-        long: location.longitude
-      })
-      .then((response) => {
-        this.updateWeatherData(response.data.properties.periods);
-      })
-      .catch((err) => {
-        console.log(err);
-      });
-    })
+  // componentDidMount () {
+  //   var location; 
+  //   navigator.geolocation.getCurrentPosition((data) => {
+  //     console.log(data);      
+  //     location = data.coords;
+  //     Axios.post('/weather', {
+  //       lat: location.latitude,
+  //       lon: location.longitude
+  //     })
+  //     .then((response) => {
+  //       console.log(response.data);
+  //       this.updateWeatherData(response.data);
+  //     })
+  //     .catch((err) => {
+  //       console.log(err);
+  //     });
+  //   })
 
 
-  }
+  // }
 }
 
 // periods.length // array of objects in forecast

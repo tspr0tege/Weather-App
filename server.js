@@ -15,14 +15,11 @@ app.listen(PORT, () => {
 });
 
 app.post('/weather', (req, res) => {
-  
-  // console.log(`https://national-weather-service.p.rapidapi.com/points/${req.body.lat},${req.body.long}/forecast`);
-  // res.send('Trying');
 
-  Axios.get(`https://national-weather-service.p.rapidapi.com/points/${req.body.lat},${req.body.long}/forecast`, {
+  Axios.get(`https://weatherbit-v1-mashape.p.rapidapi.com/forecast/daily?lat=${req.body.lat}&lon=${req.body.lon}`, {
     headers: {
       'x-rapidapi-key': API_KEY,
-      'x-rapidapi-host': 'national-weather-service.p.rapidapi.com'
+      'x-rapidapi-host': 'weatherbit-v1-mashape.p.rapidapi.com'
     }
   })
   .then((response) => {

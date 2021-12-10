@@ -1,27 +1,22 @@
 import React from 'react';
+import icons from '../data/icons'
 
 export default ({ weatherData }) => {
-  let { icon, windSpeed, windDirection, name, temperature, temperatureUnit, shortForecast, detailedForecast } = weatherData;
+  let {weather, wind_spd, wind_cdir, temp, min_temp} = weatherData;
+  let { icon, description } = weather;
 
   return (
     <div id="nearest-weather">
       {/* <!-- icon --> */}
-      <img src={icon} alt="Tonight forecast icon" />
+      <img src={icons[icon]} alt="Tonight forecast icon" />
       <div  className="left-ctr">
         <h2>Wind:</h2>
-        {/* <!-- windSpeed windDirection --> */}
-        <p>{windSpeed} {windDirection}</p>
+        <p>{wind_spd} {wind_cdir}</p>
       </div>
       <div>
-        {/* <!-- name --> */}
-        <h2>{name}</h2>
-        {/* <!-- temperature temperatureUnit --> */}
-        <p><span className="degrees">{temperature}</span> {temperatureUnit}</p>
-        {/* <!-- shortForecast --> */}
-        <p>{shortForecast}</p>
+        <p><span className="degrees">{temp}</span> C</p>
+        <p>{description}</p>
       </div>
-      {/* <!-- "detailedForecast"  --> */}
-      <p className="left-ctr">"{detailedForecast}"</p>
     </div>
   );
 }
