@@ -28,14 +28,6 @@ body {
   box-sizing: border-box;
 }
 
-#nearest-weather {
-  display: grid;
-  grid-template-columns: 1fr 2fr;
-  grid-template-rows: 1fr 1fr;
-  grid-column-gap: 5px;
-  width: 80%;
-}
-
 #forecast-container {
   width: 90%;
   box-sizing: border-box;
@@ -44,19 +36,25 @@ body {
 }
 
 .forecast-tile {
-  width: 90%;
-  height: 120px;
+  width: 80%;
+  height: 90px;
   box-sizing: border-box;
-  border-radius: 20px;
+  border-radius: 45px;
   background-color: rgba(255,255,255, 0.2);
-  box-shadow: 5px 5px 10px 10px rgba(0, 0, 0, 0.2);
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
+  /* box-shadow: 5px 5px 10px 10px rgba(0, 0, 0, 0.2); */
   overflow: hidden;
-  padding-left: 20px;
   margin: 20px;
+  padding: 10px;
+  display: grid;
+  grid-template: 100% / repeat(3, 1fr);
+  align-items: center;
+  justify-items: center;
+  gap: 20px;
+  text-align: center;
 }
+
+/* .forecast-tile img {
+} */
 
 .degrees {
   font-size: 2em;
@@ -64,19 +62,4 @@ body {
 
 h2 {
   margin-bottom: 10px;
-}
-
-.left-ctr {
-  justify-self: left;
-  align-self: end;
-}
-
-/* .forecast-tile div {
-  margin: auto;
-} */
-
-.forecast-tile img {
-  height: 100%;
-  width: auto;
-  object-fit: contain;
 }

@@ -8,7 +8,7 @@ export default ({ weatherData }) => {
   return(
     <div className="forecast-tile">
       <img src={icons[icon]} alt="Tonight forecast icon" />
-      <div  className="left-ctr">
+      <div>
         <h2>Wind:</h2>
         <p>{wind_spd} {wind_cdir}</p>
       </div>
