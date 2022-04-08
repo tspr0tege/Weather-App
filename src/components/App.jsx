@@ -21,7 +21,6 @@ class App extends React.Component {
   
     return(
       <div className="container">
-        {/* <NearestWeather weatherData={this.state.weatherData[0]}/> */}
         <ForecastContainer weatherData={this.state.weatherData}/>
       </div>
     )

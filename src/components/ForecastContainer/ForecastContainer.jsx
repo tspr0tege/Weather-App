@@ -16,7 +16,7 @@ export default ({ weatherData }) => {
       {weatherData.slice(0, 5).map((data, i) => {
         return(
           <div key={i} className="forecast-tile">
-            <p>{(!i) ? 'Today' : weekday(i)}</p>
+            <h2>{(!i) ? 'Today' : weekday(i)}</h2>
             <ForecastTile weatherData={data}/>
           </div>
         )

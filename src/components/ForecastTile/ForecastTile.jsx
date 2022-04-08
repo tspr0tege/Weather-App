@@ -7,16 +7,14 @@ export default ({ weatherData }) => {
   let { icon, description } = weather;
 
   return(
-    <div>
+    <>
       <img src={icons[icon]} alt="Tonight forecast icon" />
+      <p>{description}</p>
+      <p><span className="degrees">{Math.floor(temp*1.8 + 32)}°</span> F</p>
       <div>
-        <h2>Wind:</h2>
+        <h3>Wind:</h3>
         <p>{wind_spd} {wind_cdir}</p>
       </div>
-      <div>
-        <p><span className="degrees">{Math.floor(temp*1.8 + 32)}</span> F</p>
-        <p>{description}</p>
-      </div>
-    </div>
+    </>
   );
 }
