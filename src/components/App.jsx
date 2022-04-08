@@ -1,8 +1,7 @@
 import React from 'react';
 import Axios from 'axios';
 
-import ForecastContainer from './ForecastContainer.jsx'
-import NearestWeather from './NearestWeather.jsx';
+import ForecastContainer from './ForecastContainer/ForecastContainer.jsx'
 import dummyData from '../data/dummyData.js';
 
 class App extends React.Component {

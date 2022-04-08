@@ -1,5 +1,6 @@
 import React from 'react';
-import ForecastTile from './ForecastTile.jsx';
+import ForecastTile from '../ForecastTile/ForecastTile.jsx';
+import './ForecastContainer.css';
 
 export default ({ weatherData }) => {
 
@@ -14,7 +15,7 @@ export default ({ weatherData }) => {
     <div id="forecast-container">
       {weatherData.slice(0, 5).map((data, i) => {
         return(
-          <div>
+          <div key={i} className="forecast-tile">
             <p>{(!i) ? 'Today' : weekday(i)}</p>
             <ForecastTile weatherData={data}/>
           </div>

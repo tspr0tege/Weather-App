@@ -17,47 +17,15 @@ body {
 
 .container {
   width: 700px;
-  max-height: 80%;
-  box-shadow: 15px 15px 10px 10px rgba(0, 0, 0, 0.2);
-  background: linear-gradient(#3d3d3d, 80%, #666);
+  height: 100vh;
   display: flex;
-  flex-direction: column;
-  justify-content: space-around;
   align-items: center;
-  padding: 30px;
-  box-sizing: border-box;
-}
-
-#forecast-container {
-  width: 90%;
-  box-sizing: border-box;
-  padding: 20px;
-  overflow: hidden;
-}
-
-.forecast-tile {
-  width: 80%;
-  height: 90px;
-  box-sizing: border-box;
-  border-radius: 45px;
-  background-color: rgba(255,255,255, 0.2);
-  /* box-shadow: 5px 5px 10px 10px rgba(0, 0, 0, 0.2); */
-  overflow: hidden;
-  margin: 20px;
-  padding: 10px;
-  display: grid;
-  grid-template: 100% / repeat(3, 1fr);
-  align-items: center;
-  justify-items: center;
-  gap: 20px;
-  text-align: center;
-}
-
-/* .forecast-tile img {
-} */
-
-.degrees {
-  font-size: 2em;
+  /* max-height: 80%; */
+  /* box-shadow: 15px 15px 10px 10px rgba(0, 0, 0, 0.2); */
+  /* background: linear-gradient(#3d3d3d, 80%, #666); */
+  /* flex-direction: column; */
+  /* padding: 30px; */
+  /* box-sizing: border-box; */
 }
 
 h2 {
